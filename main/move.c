@@ -13,7 +13,7 @@
  * main.c
  */
 
-//³õÊ¼»¯P1
+//åˆå§‹åŒ–P1
 void Port1_Init(void){
   P1->SEL0 = 0x00;
   P1->SEL1 = 0x00;
@@ -22,12 +22,12 @@ void Port1_Init(void){
   P1->OUT = 0x12;
 }
 
-//ÊäÈëP1
+//è¾“å…¥P1
 uint8_t Port1_Input(void){
   return (P1->IN&0x12);
 }
 
-//³õÊ¼»¯P2
+//åˆå§‹åŒ–P2
 void Port2_Init(void)
 {
     P2->SEL0 = 0x00;
@@ -37,12 +37,12 @@ void Port2_Init(void)
     P2->OUT = 0x00;
 }
 
-//Êä³öP1
+//è¾“å‡ºP1
 void Port1_Output(uint8_t data){        // write all of P1.0 outputs
   P1->OUT = (P1->OUT&0xFE)|data;
 }
 
-//Êä³öP2
+//è¾“å‡ºP2
 void Port2_Output(uint8_t data)
 {
     P2->OUT = data;
@@ -51,7 +51,7 @@ void Port2_Output(uint8_t data)
 
 void main(void)
 {
-    uint8_t status;     //´¢´æ¿ª¹ØµÄ×´Ì¬
+    uint8_t status;     //å‚¨å­˜å¼€å…³çš„çŠ¶æ€
     int direction = 0;
     Port1_Init();
     Port2_Init();
